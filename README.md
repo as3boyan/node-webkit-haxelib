@@ -19,7 +19,7 @@ NOTE: Currently tested only on Windows, needs some tuning for Linux/Mac.
 
 On first use it should download automatically latest version of node-webkit.
 
-## Autoupdate system
+### Autoupdate system
 node-webkit-haxelib should check latest version for node-webkit binary automatically each 7 days. It checks for updates when you run it.
 
 You can disable/enable autoupdate system(enabled by default) using these command line arguments
@@ -28,7 +28,7 @@ Disables autoupdate system.
 `haxelib run node-webkit autoupdate true`
 Enables autoupdate system.
 
-## How to update node-webkit binary
+### How to update node-webkit binary
 Also you can manually update node-webkit binary to the latest version using this command:
 `haxelib run node-webkit setup`
 

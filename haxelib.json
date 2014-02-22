@@ -1,0 +1,11 @@
+{
+    "name": "node-webkit",
+    "url" : "https://github.com/as3boyan/node-webkit-haxelib",
+    "license": "MIT",
+    "tags": ["html5", "node-webkit", "chrome", "node.js"],
+    "description": "Haxelib which downloads node-webkit binary for your platform and keeps it updated",
+    "version": "1.0.0",
+    "releasenote": "Currently Windows only, needs tuning for Linux/Mac",
+    "contributors": ["as3boyan"],
+    "dependencies": {}
+}
