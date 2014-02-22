@@ -3,6 +3,10 @@ node-webkit-haxelib
 
 Haxelib which downloads node-webkit binary for your platform and makes it accessible via `haxelib run node-webkit path/to/index.html`
 
+### Installation using haxelib
+``` bash
+haxelib install node-webkit
+```
 
 ### Using version from github:
 ``` bash
@@ -17,7 +21,7 @@ is equvalent to
 
 NOTE: Currently tested only on Windows, needs some tuning for Linux/Mac.
 
-On first use it should download automatically latest version of node-webkit.
+On first use it should automatically download latest version of node-webkit.
 
 ### Autoupdate system
 node-webkit-haxelib should check latest version for node-webkit binary automatically each 7 days. It checks for updates when you run it.
