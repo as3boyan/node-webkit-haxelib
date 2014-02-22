@@ -82,7 +82,7 @@ class Main
 				setup();
 			}
 			
-			var path:String = args[0];
+			var path:String = args[1];
 			
 			if (!FileSystem.exists(path))
 			{
@@ -96,7 +96,7 @@ class Main
 		}
 		else 
 		{
-			ProcessHelper.runProcess("./bin", "nw", [], false);
+			ProcessHelper.runProcess("./bin", "nw", [args[0]], false);
 		}
 	}
 	
