@@ -1,0 +1,3 @@
+#!/bin/bash
+ln -s /lib/x86_64-linux-gnu/libudev.so.1 ./libudev.so.0
+LD_LIBRARY_PATH=/home/omi/nw:$LD_LIBRARY_PATH ./bin/nw $*

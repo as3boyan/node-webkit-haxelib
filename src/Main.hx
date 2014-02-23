@@ -83,7 +83,7 @@ class Main
 			}
 			
 			var path:String = args[1];
-			
+
 			if (!FileSystem.exists(path))
 			{
 				path = PathHelper.combine(args[1], args[0]);
@@ -91,12 +91,35 @@ class Main
 			
 			if (FileSystem.exists(path))
 			{
-				ProcessHelper.runProcess("./bin", "nw", [path], false);
+				if (PlatformHelper.hostPlatform == Platform.LINUX)
+				{
+					if (!FileSystem.exists(args[0]))
+					{
+						path = PathHelper.combine(args[1], args[0]);
+					}
+					else
+					{
+						path = args[0];
+					}
+
+					ProcessHelper.runProcess("", "bash", ["nw-linux", path], false);
+				}
+				else
+				{
+					ProcessHelper.runProcess("./bin", "nw", [path], false);
+				}
 			}
 		}
 		else 
 		{
-			ProcessHelper.runProcess("./bin", "nw", [args[0]], false);
+			if (PlatformHelper.hostPlatform == Platform.LINUX)
+			{
+				ProcessHelper.runProcess("", "bash", ["nw-linux", args[0]], false);
+			}
+			else
+			{
+				ProcessHelper.runProcess("./bin", "nw", [args[0]], false);
+			}
 		}
 	}
 	
@@ -187,8 +210,20 @@ class Main
 			FileSystem.deleteFile(PathHelper.combine("bin", entry));
 		}
 		
-		extractFile(localPath, "./bin");
-		FileSystem.deleteFile(localPath);
+		extractFile(localPath, "bin");
+
+		if (PlatformHelper.hostPlatform == Platform.LINUX)
+		{
+			var folder = FileSystem.readDirectory("bin")[0];
+			Sys.command("cp" ,["-a", "bin/" + folder + "/*", "bin"]);
+			Sys.command("rm", ["-rf", "bin/" + folder]);
+
+			// Sys.setCwd("bin");
+			// Sys.command("ln", ["-s", "/lib/x86_64-linux-gnu/libudev.so.1", "./libudev.so.0"]);
+			// Sys.setCwd("..");
+		}
+
+		//FileSystem.deleteFile(localPath);
 		
 		autoUpdateInfo.lastLocalPath = localPath;
 		File.saveContent("autoupdate", Serializer.run(autoUpdateInfo));
@@ -291,7 +326,7 @@ class Main
 
 				ProcessHelper.runCommand ("", "tar", [ arguments, sourceZIP ], false);
 				ProcessHelper.runCommand ("", "cp", [ "-R", ignoreRootFolder + "/*", targetPath ], false);
-				Sys.command ("rm", [ "-r", ignoreRootFolder ]);
+				//Sys.command ("rm", [ "-r", ignoreRootFolder ]);
 
 			} else {
 
