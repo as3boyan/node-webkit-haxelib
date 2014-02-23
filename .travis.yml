@@ -12,7 +12,7 @@ before_script:
   - haxelib setup ~/haxelib
 
 script:
-  - haxe -cp src -main Main -neko run.n
+  - haxe build.hxml
 
 notifications:
     email: false

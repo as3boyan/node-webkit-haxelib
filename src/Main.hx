@@ -108,11 +108,14 @@ class Main
 			autoUpdateInfo = Unserializer.run(buf);
 		}
 		
-		if (autoUpdateInfo.autoupdate && (autoUpdateInfo.lastCheckedDate == null || (Date.now().getTime() - autoUpdateInfo.lastCheckedDate.getTime() > DateTools.days(7))))
+		var outdated:Bool = autoUpdateInfo.lastCheckedDate == null || (Date.now().getTime() - autoUpdateInfo.lastCheckedDate.getTime() > DateTools.days(7));
+		var notInstalled:Bool = !FileSystem.exists("bin");
+
+		if (autoUpdateInfo.autoupdate && (outdated || notInstalled))
 		{
 			lookForNodeWebkitURL();
 			
-			if (autoUpdateInfo.lastLocalPath != localPath)
+			if (autoUpdateInfo.lastLocalPath != localPath || notInstalled)
 			{
 				Sys.println("Found a new version of node-webkit binary: " + localPath);
 				downloadAndExtract();
@@ -165,12 +168,7 @@ class Main
 	}
 	
 	private static function setup():Void
-	{
-		if (!FileSystem.exists("bin"))
-		{
-			FileSystem.createDirectory("bin");
-		}
-		
+	{		
 		lookForNodeWebkitURL();
 		downloadAndExtract();
 	}
@@ -179,6 +177,11 @@ class Main
 	{
 		downloadFile(nodeWebkitUrl);
 			
+		if (!FileSystem.exists("bin"))
+		{
+			FileSystem.createDirectory("bin");
+		}
+
 		for (entry in FileSystem.readDirectory("bin"))
 		{
 			FileSystem.deleteFile(PathHelper.combine("bin", entry));
@@ -228,10 +231,10 @@ class Main
 			}
 
 		}
-		
+
 		var out = File.write(localPath, true);
 		var progress = new Progress (out);
-		var h = new Http (remotePath);
+		var h = new Http ("http://s3.amazonaws.com/node-webkit/" + remotePath);
 
 		h.cnxTimeout = 30;
 
