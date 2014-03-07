@@ -36,4 +36,6 @@ Enables autoupdate system.
 Also you can manually update node-webkit binary to the latest version using this command:
 `haxelib run node-webkit setup`
 
+![How node-webkit haxelib works](https://raw.github.com/as3boyan/node-webkit-haxelib/master/node-webkit.png "How it works")
+
 node-webkit-haxelib heavily uses many helpers and classes from lime-tools(https://github.com/openfl/lime-tools)
