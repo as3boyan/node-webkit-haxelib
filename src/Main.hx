@@ -52,90 +52,93 @@ class Main
 	
 	static function main() 
 	{	
-		checkUpdates();
-		
 		var args:Array<String> = Sys.args();
 		
 		if (args[0] == "setup")
 		{
 			setup();
 		}
-		else if (args[0] == "autoupdate")
+		else 
 		{
-			if (args[1] == "true")
-			{
-				autoUpdateInfo.autoupdate = true;
-				File.saveContent("autoupdate", Serializer.run(autoUpdateInfo));
-				Sys.println("Autoupdate now is on");
-			}
-			else if (args[1] == "false") 
-			{
-				autoUpdateInfo.autoupdate = false;
-				File.saveContent("autoupdate", Serializer.run(autoUpdateInfo));
-				Sys.println("Autoupdate now is off");
-			}
-		}
-		else if (args.length > 1)
-		{			
-			if (!FileSystem.exists("bin"))
-			{
-				setup();
-			}
+			checkUpdates();
 			
-			var path:String = args[1];
+			if (args[0] == "autoupdate")
+			{
+				if (args[1] == "true")
+				{
+					autoUpdateInfo.autoupdate = true;
+					File.saveContent("autoupdate", Serializer.run(autoUpdateInfo));
+					Sys.println("Autoupdate now is on");
+				}
+				else if (args[1] == "false") 
+				{
+					autoUpdateInfo.autoupdate = false;
+					File.saveContent("autoupdate", Serializer.run(autoUpdateInfo));
+					Sys.println("Autoupdate now is off");
+				}
+			}
+			else if (args.length > 1)
+			{			
+				if (!FileSystem.exists("bin"))
+				{
+					setup();
+				}
+				
+				var path:String = args[1];
 
-			if (!FileSystem.exists(path))
-			{
-				path = PathHelper.combine(args[1], args[0]);
+				if (!FileSystem.exists(path))
+				{
+					path = PathHelper.combine(args[1], args[0]);
+				}
+				
+				if (FileSystem.exists(path))
+				{
+					if (PlatformHelper.hostPlatform == Platform.LINUX)
+					{
+						if (!FileSystem.exists(args[0]))
+						{
+							path = PathHelper.combine(args[1], args[0]);
+						}
+						else
+						{
+							path = args[0];
+						}
+
+						ProcessHelper.runProcess("", "bash", ["nw-linux", path], false);
+					}
+					else if(PlatformHelper.hostPlatform == Platform.MAC)
+					{
+						if (!FileSystem.exists(args[0]))
+						{
+							path = PathHelper.combine(args[1], args[0]);
+						}
+						else
+						{
+							path = args[0];
+						}
+						
+						ProcessHelper.runProcess("./bin", "node-webkit.app/Contents/MacOS/node-webkit", [path], false);
+					}
+					else
+					{
+						ProcessHelper.runProcess("./bin", "nw", [path], false);
+					}
+				}
 			}
-			
-			if (FileSystem.exists(path))
+			else 
 			{
 				if (PlatformHelper.hostPlatform == Platform.LINUX)
 				{
-					if (!FileSystem.exists(args[0]))
-					{
-						path = PathHelper.combine(args[1], args[0]);
-					}
-					else
-					{
-						path = args[0];
-					}
-
-					ProcessHelper.runProcess("", "bash", ["nw-linux", path], false);
+					ProcessHelper.runProcess("", "bash", ["nw-linux", args[0]], false);
 				}
-                else if(PlatformHelper.hostPlatform == Platform.MAC)
-                {
-					if (!FileSystem.exists(args[0]))
-					{
-						path = PathHelper.combine(args[1], args[0]);
-					}
-					else
-					{
-						path = args[0];
-					}
-					
-                    ProcessHelper.runProcess("./bin", "node-webkit.app/Contents/MacOS/node-webkit", [path], false);
-                }
+				else if (PlatformHelper.hostPlatform == Platform.MAC)
+				{
+					ProcessHelper.runProcess("./bin", "node-webkit.app/Contents/MacOS/node-webkit", [args[0]], false);
+				}
 				else
 				{
-					ProcessHelper.runProcess("./bin", "nw", [path], false);
+					ProcessHelper.runProcess("./bin", "nw", [args[0]], false);
 				}
-			}
-		}
-		else 
-		{
-			if (PlatformHelper.hostPlatform == Platform.LINUX)
-			{
-				ProcessHelper.runProcess("", "bash", ["nw-linux", args[0]], false);
-			}
-            else if (PlatformHelper.hostPlatform == Platform.MAC)
-            {
-                ProcessHelper.runProcess("./bin", "node-webkit.app/Contents/MacOS/node-webkit", [args[0]], false);
-            }
-			else
-			{
-				ProcessHelper.runProcess("./bin", "nw", [args[0]], false);
 			}
 		}
 	}
@@ -224,7 +227,7 @@ class Main
 
 		for (entry in FileSystem.readDirectory("bin"))
 		{
-			FileSystem.deleteFile(PathHelper.combine("bin", entry));
+			removeFile(PathHelper.combine("bin", entry));
 		}
 		
 		extractFile(localPath, "bin");
@@ -234,13 +237,14 @@ class Main
 			var folder = FileSystem.readDirectory("bin")[0];
 			Sys.command("cp" ,["-a", "bin/" + folder + "/*", "bin"]);
 			Sys.command("rm", ["-rf", "bin/" + folder]);
-
-			// Sys.setCwd("bin");
-			// Sys.command("ln", ["-s", "/lib/x86_64-linux-gnu/libudev.so.1", "./libudev.so.0"]);
-			// Sys.setCwd("..");
 		}
-
-		//FileSystem.deleteFile(localPath);
+		
+		if (PlatformHelper.hostPlatform != Platform.WINDOWS)
+		{
+			Sys.command("chmod", ["-R", "777", "bin"]);
+		}
+		
+		removeFile(localPath);
 		
 		autoUpdateInfo.lastLocalPath = localPath;
 		File.saveContent("autoupdate", Serializer.run(autoUpdateInfo));
@@ -269,6 +273,18 @@ class Main
 
 	}
 	
+	private static function removeFile(path:String)
+	{
+		if (PlatformHelper.hostPlatform == Platform.WINDOWS)
+		{
+			FileSystem.deleteFile(path);
+		}
+		else 
+		{
+			Sys.command("rm", [(path)]);
+		}
+	}
+	
 	//Uses parts of code from lime-tools https://github.com/openfl/lime-tools/blob/ac2ca52e89c0d5e2758246415e9286dbc63c36a5/src/utils/PlatformSetup.hx
 	
 	private static function downloadFile(remotePath:String):Void
@@ -292,7 +308,7 @@ class Main
 
 		h.onError = function (e) {
 			progress.close();
-			FileSystem.deleteFile (localPath);
+			removeFile(localPath);
 			throw e;
 		};
 
