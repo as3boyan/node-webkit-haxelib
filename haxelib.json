@@ -4,8 +4,8 @@
     "license": "MIT",
     "tags": ["html5", "node-webkit", "chrome", "node.js"],
     "description": "Haxelib which downloads node-webkit binary for your platform and keeps it updated",
-    "version": "1.0.1",
-    "releasenote": "Linux support.",
+    "version": "1.0.2",
+    "releasenote": "Mac support. Bug fixes.",
     "contributors": ["as3boyan"],
     "dependencies": {}
 }
