@@ -104,6 +104,19 @@ class Main
 
 					ProcessHelper.runProcess("", "bash", ["nw-linux", path], false);
 				}
+                else if(PlatformHelper.hostPlatform == Platform.MAC)
+                {
+					if (!FileSystem.exists(args[0]))
+					{
+						path = PathHelper.combine(args[1], args[0]);
+					}
+					else
+					{
+						path = args[0];
+					}
+					
+                    ProcessHelper.runProcess("./bin", "node-webkit.app/Contents/MacOS/node-webkit", [path], false);
+                }
 				else
 				{
 					ProcessHelper.runProcess("./bin", "nw", [path], false);
@@ -116,6 +129,10 @@ class Main
 			{
 				ProcessHelper.runProcess("", "bash", ["nw-linux", args[0]], false);
 			}
+            else if (PlatformHelper.hostPlatform == Platform.MAC)
+            {
+                ProcessHelper.runProcess("./bin", "node-webkit.app/Contents/MacOS/node-webkit", [args[0]], false);
+            }
 			else
 			{
 				ProcessHelper.runProcess("./bin", "nw", [args[0]], false);
