@@ -156,16 +156,27 @@ class Main
 
 		if (autoUpdateInfo.autoupdate && (outdated || notInstalled))
 		{
-			lookForNodeWebkitURL();
-			
-			if (autoUpdateInfo.lastLocalPath != localPath || notInstalled)
+			try 
 			{
-				Sys.println("Found a new version of node-webkit binary: " + localPath);
-				downloadAndExtract();
+				lookForNodeWebkitURL();
 			}
-			else 
+			catch (err:Dynamic)
 			{
-				Sys.println("You are using latest version of node-webkit binary: " + localPath);
+				trace(err);
+				success = false;
+			}
+			
+			if (success) 
+			{
+				if (autoUpdateInfo.lastLocalPath != localPath || notInstalled)
+				{
+					Sys.println("Found a new version of node-webkit binary: " + localPath);
+					downloadAndExtract();
+				}
+				else 
+				{
+					Sys.println("You are using latest version of node-webkit binary: " + localPath);
+				}
 			}
 			
 			autoUpdateInfo.lastCheckedDate = Date.now();
@@ -207,7 +218,10 @@ class Main
 			}
 		}
 		
-		localPath = Path.withoutDirectory(nodeWebkitUrl);
+		if (nodeWebkitUrl != null) 
+		{
+			localPath = Path.withoutDirectory(nodeWebkitUrl);
+		}
 	}
 	
 	private static function setup():Void
