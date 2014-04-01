@@ -153,6 +153,8 @@ class Main
 		
 		var outdated:Bool = autoUpdateInfo.lastCheckedDate == null || (Date.now().getTime() - autoUpdateInfo.lastCheckedDate.getTime() > DateTools.days(7));
 		var notInstalled:Bool = !FileSystem.exists("bin");
+		
+		var success:Bool = true;
 
 		if (autoUpdateInfo.autoupdate && (outdated || notInstalled))
 		{
