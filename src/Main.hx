@@ -118,6 +118,7 @@ class Main
 						}
 						
 						ProcessHelper.runProcess("./bin", "node-webkit.app/Contents/MacOS/node-webkit", [path], false);
+						trace(path);
 					}
 					else
 					{
@@ -134,6 +135,7 @@ class Main
 				else if (PlatformHelper.hostPlatform == Platform.MAC)
 				{
 					ProcessHelper.runProcess("./bin", "node-webkit.app/Contents/MacOS/node-webkit", [args[0]], false);
+					trace(args[0]);
 				}
 				else
 				{
