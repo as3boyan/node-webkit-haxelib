@@ -192,33 +192,46 @@ class Main
 	{
 		Sys.println("Looking for node-webkit url...");
 		
-		var xml:Xml = Xml.parse(Http.requestUrl("http://s3.amazonaws.com/node-webkit/"));
-		var fast:Fast = new Fast(xml.firstElement());
+		var data = Http.requestUrl("https://github.com/rogerwang/node-webkit");
 		
-		for (contents in fast.nodes.Contents)
-		{				
-			if (contents.node.Key.innerData.indexOf("node-webkit") > -1)
+		var eregLinux64bit = ~/<li>Linux:[\t ]*<a href="[^"]+[^h]+href="([^"]+)/g;
+		var eregLinux32bit = ~/<li>Linux:[\t ]*<a href="([^"]+)/g;
+		var eregWindows = ~/<li>Windows:[\t ]*<a href="([^"]+)/g;
+		var eregMac = ~/<li>Mac:[\t ]*<a href="([^"]+)/g;
+		
+		if (data.indexOf("node-webkit") > -1)
+		{
+			switch (PlatformHelper.hostPlatform) 
 			{
-				switch (PlatformHelper.hostPlatform) 
-				{
-					case Platform.WINDOWS:
-						if (contents.node.Key.innerData.indexOf("win") > -1)
+				case Platform.WINDOWS:
+					if (eregWindows.match(data))
+					{
+						nodeWebkitUrl = eregWindows.matched(1);
+					}
+				case Platform.LINUX:
+					var is64Bit:Bool = PlatformHelper.hostArchitecture.match(project.Architecture.X64);
+
+					if (is64Bit)
+					{
+						if (eregLinux64bit.match(data))
 						{
-							nodeWebkitUrl = contents.node.Key.innerData;
+							nodeWebkitUrl = eregLinux64bit.matched(1);
 						}
-					case Platform.LINUX:
-						if (contents.node.Key.innerData.indexOf("linux-x64") > -1)
+					}
+					else
+					{
+						if (eregLinux32bit.match(data))
 						{
-							nodeWebkitUrl = contents.node.Key.innerData;
+							nodeWebkitUrl = eregLinux32bit.matched(1);
 						}
-					case Platform.MAC:
-						if (contents.node.Key.innerData.indexOf("osx") > -1)
-						{
-							nodeWebkitUrl = contents.node.Key.innerData;
-						}
-					default:
-						
-				}
+					}
+				case Platform.MAC:
+					if (eregMac.match(data))
+					{
+						nodeWebkitUrl = eregMac.matched(1);
+					}
+				default:
+
 			}
 		}
 		
@@ -318,9 +331,19 @@ class Main
 
 		}
 
+		trace(remotePath);
+
+// 		var data = Http.requestUrl(remotePath);
+
+		
+// 		File.write(localPath, true).
+		
 		var out = File.write(localPath, true);
 		var progress = new Progress (out);
-		var h = new Http ("http://s3.amazonaws.com/node-webkit/" + remotePath);
+		//"http://s3.amazonaws.com/node-webkit/" +
+		var h = new Http (remotePath);
+		
+		trace(remotePath);
 
 		h.cnxTimeout = 30;
 
@@ -331,7 +354,7 @@ class Main
 		};
 
 		Lib.println ("Downloading " + localPath + "...");
-		
+
 		h.customRequest (false, progress);
 
 		if (h.responseHeaders != null && h.responseHeaders.exists ("Location")) 

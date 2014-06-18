@@ -3,3 +3,4 @@
 -neko run.n
 -debug
 -dce full
+-lib hxssl

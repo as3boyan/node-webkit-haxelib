@@ -1,0 +1,5 @@
+autoupdate
+libudev.so.0
+node-webkit*.zip
+node-webkit*.tar.gz
+bin

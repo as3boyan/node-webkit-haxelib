@@ -1,0 +1,26 @@
+{
+     "type" : 2
+    ,"target" : null
+    ,"name" : "/node-webkit-haxelib"
+    ,"main" : "build.hxml"
+    ,"projectPackage" : null
+    ,"company" : null
+    ,"license" : null
+    ,"url" : null
+    ,"targetData" : [
+
+    ]
+    ,"files" : [
+
+    ]
+    ,"activeFile" : "src/Main.hx"
+    ,"openFLTarget" : null
+    ,"openFLBuildMode" : "Debug"
+    ,"runActionType" : 2
+    ,"runActionText" : "neko run.n"
+    ,"buildActionCommand" : null
+    ,"hiddenItems" : [
+
+    ]
+    ,"showHiddenItems" : false
+}
