@@ -4,8 +4,8 @@
     "license": "MIT",
     "tags": ["html5", "node-webkit", "chrome", "node.js"],
     "description": "Haxelib which downloads node-webkit binary for your platform and keeps it updated",
-    "version": "1.0.5",
-    "releasenote": "Provide binaries for 32 bit Linux. Look for url on node-webkit github(to ensure using latest version)",
+    "version": "1.0.6",
+    "releasenote": "Add hxssl.ndll for Windows",
     "contributors": ["as3boyan"],
     "dependencies": {}
 }
