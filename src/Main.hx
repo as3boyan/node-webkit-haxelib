@@ -192,7 +192,8 @@ class Main
 	{
 		Sys.println("Looking for node-webkit url...");
 		
-		var data = Http.requestUrl("https://github.com/rogerwang/node-webkit");
+		var data = sys.io.File.getContent("rogerwang_node-webkit.html");
+		//Http.requestUrl("https://github.com/rogerwang/node-webkit");
 		
 		var eregLinux64bit = ~/<li>Linux:[\t ]*<a href="[^"]+[^h]+href="([^"]+)/g;
 		var eregLinux32bit = ~/<li>Linux:[\t ]*<a href="([^"]+)/g;

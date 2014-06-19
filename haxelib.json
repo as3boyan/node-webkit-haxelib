@@ -4,8 +4,8 @@
     "license": "MIT",
     "tags": ["html5", "node-webkit", "chrome", "node.js"],
     "description": "Haxelib which downloads node-webkit binary for your platform and keeps it updated",
-    "version": "1.0.6",
-    "releasenote": "Add hxssl.ndll for Windows",
+    "version": "1.0.7",
+    "releasenote": "Use downloaded page instead of accessing node-webkit github page(to avoid hxssl issues, seems like it need to be rebuild)",
     "contributors": ["as3boyan"],
     "dependencies": {}
 }

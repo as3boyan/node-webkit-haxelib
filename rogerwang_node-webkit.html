@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html class="   "><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    
+    <title>rogerwang/node-webkit</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="https://github.com/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://github.com/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://github.com/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://github.com/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://github.com/apple-touch-icon-144.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="@github" name="twitter:site"><meta content="summary" name="twitter:card"><meta content="rogerwang/node-webkit" name="twitter:title"><meta content="node-webkit - Call all Node.js modules directly from DOM and enable a new way of writing applications with all Web technologies." name="twitter:description"><meta content="https://avatars1.githubusercontent.com/u/165401?s=400" name="twitter:image:src">
+<meta content="GitHub" property="og:site_name"><meta content="object" property="og:type"><meta content="https://avatars1.githubusercontent.com/u/165401?s=400" property="og:image"><meta content="rogerwang/node-webkit" property="og:title"><meta content="https://github.com/rogerwang/node-webkit" property="og:url"><meta content="node-webkit - Call all Node.js modules directly from DOM and enable a new way of writing applications with all Web technologies." property="og:description">
+
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    <link rel="conduit-xhr" href="https://ghconduit.com:25035/">
+    <link rel="xhr-socket" href="https://github.com/_sockets">
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_source" data-pjax-transient="">
+      <meta name="google-analytics" content="UA-3769691-2">
+
+    <meta content="collector.githubapp.com" name="octolytics-host"><meta content="collector-cdn.github.com" name="octolytics-script-host"><meta content="github" name="octolytics-app-id"><meta content="4E190D12:6285:4DA3D08:53A20390" name="octolytics-dimension-request_id"><meta content="4158590" name="octolytics-actor-id"><meta content="as3boyan" name="octolytics-actor-login"><meta content="a3956ab7fff75f8a6365f462209bdcfa812805e2295a3bec4f7296dabf803768" name="octolytics-actor-hash">
+    
+
+    
+    
+    <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+
+    <meta content="authenticity_token" name="csrf-param">
+<meta content="CI7yj14U1b9jgcB7cyRJzcypZY1iF/I2rzCkquQ6rNseMUzyuQEI3Czof/5+/yMdsHjSqRAEG7guEV3u3JcwYA==" name="csrf-token">
+
+    <link href="rogerwang_node-webkit_files/github-8850878a3b8c9016a33ac13293f916b8fb6abbc4.css" media="all" rel="stylesheet" type="text/css">
+    <link href="rogerwang_node-webkit_files/github2-229908efb675f645b84ec7f08045d1b0c47612f6.css" media="all" rel="stylesheet" type="text/css">
+    
+
+
+    <meta http-equiv="x-pjax-version" content="8c6cd03b9ad151a21810a2544246fef8">
+
+      
+  <meta name="description" content="node-webkit - Call all Node.js modules directly from DOM and enable a new way of writing applications with all Web technologies.">
+
+
+  <meta content="165401" name="octolytics-dimension-user_id"><meta content="rogerwang" name="octolytics-dimension-user_login"><meta content="3100121" name="octolytics-dimension-repository_id"><meta content="rogerwang/node-webkit" name="octolytics-dimension-repository_nwo"><meta content="true" name="octolytics-dimension-repository_public"><meta content="false" name="octolytics-dimension-repository_is_fork"><meta content="3100121" name="octolytics-dimension-repository_network_root_id"><meta content="rogerwang/node-webkit" name="octolytics-dimension-repository_network_root_nwo">
+  <link href="https://github.com/rogerwang/node-webkit/commits/master.atom" rel="alternate" title="Recent Commits to node-webkit:master" type="application/atom+xml">
+
+  <script src="rogerwang_node-webkit_files/api.js" async="" type="text/javascript"></script></head>
+
+
+  <body class="logged_in  env-production linux vis-public">
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+    <div class="wrapper">
+      
+      
+      
+      
+
+
+      <div class="header header-logged-in true">
+  <div class="container clearfix">
+
+    <a class="header-logo-invertocat" href="https://github.com/" aria-label="Homepage">
+  <span class="mega-octicon octicon-mark-github"></span>
+</a>
+
+
+    
+    <a href="https://github.com/notifications" aria-label="You have no unread notifications" class="notification-indicator tooltipped tooltipped-s" data-hotkey="g n">
+        <span class="mail-status all-read"></span>
+</a>
+
+      <div class="command-bar js-command-bar  in-repository">
+          <form accept-charset="UTF-8" action="/search" class="command-bar-form" id="top_search_form" method="get">
+
+<div class="commandbar">
+  <span class="message"></span>
+  <input data-hotkey="s" name="q" id="js-command-bar-field" placeholder="Search or type a command" tabindex="1" autocapitalize="off" data-username="as3boyan" data-repo="rogerwang/node-webkit" data-branch="master" data-sha="0929ec9b7cfa5b6f72e11b168efa905f033884d8" type="text">
+  <div class="display hidden"></div>
+</div>
+
+    <input name="nwo" value="rogerwang/node-webkit" type="hidden">
+
+    <div class="select-menu js-menu-container js-select-menu search-context-select-menu">
+      <span class="minibutton select-menu-button js-menu-target" role="button" aria-haspopup="true">
+        <span class="js-select-button">This repository</span>
+      </span>
+
+      <div class="select-menu-modal-holder js-menu-content js-navigation-container" aria-hidden="true">
+        <div class="select-menu-modal">
+
+          <div class="select-menu-item js-navigation-item js-this-repository-navigation-item selected">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input class="js-search-this-repository" name="search_target" value="repository" checked="checked" type="radio">
+            <div class="select-menu-item-text js-select-button-text">This repository</div>
+          </div> <!-- /.select-menu-item -->
+
+          <div class="select-menu-item js-navigation-item js-all-repositories-navigation-item">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input name="search_target" value="global" type="radio">
+            <div class="select-menu-item-text js-select-button-text">All repositories</div>
+          </div> <!-- /.select-menu-item -->
+
+        </div>
+      </div>
+    </div>
+
+  <span class="help tooltipped tooltipped-s" aria-label="Show command bar help">
+    <span class="octicon octicon-question"></span>
+  </span>
+
+
+  <input name="ref" value="cmdform" type="hidden">
+
+</form>
+        <ul class="top-nav">
+          <li class="explore"><a href="https://github.com/explore">Explore</a></li>
+            <li><a href="https://gist.github.com/">Gist</a></li>
+            <li><a href="https://github.com/blog">Blog</a></li>
+          <li><a href="https://help.github.com/">Help</a></li>
+        </ul>
+      </div>
+
+    
+
+
+  <ul id="user-links">
+    <li>
+      <a href="https://github.com/as3boyan" class="name">
+        <img alt="as3boyan" class=" js-avatar" data-user="4158590" src="rogerwang_node-webkit_files/4158590.png" height="20" width="20"> as3boyan
+      </a>
+    </li>
+
+    <li class="new-menu dropdown-toggle js-menu-container">
+      <a href="#" class="js-menu-target tooltipped tooltipped-s" aria-label="Create new...">
+        <span class="octicon octicon-plus"></span>
+        <span class="dropdown-arrow"></span>
+      </a>
+
+      <div class="new-menu-content js-menu-content">
+      </div>
+    </li>
+
+    <li>
+      <a href="https://github.com/settings/profile" id="account_settings" class="tooltipped tooltipped-s" aria-label="Account settings ">
+        <span class="octicon octicon-tools"></span>
+      </a>
+    </li>
+    <li>
+      <form class="logout-form" action="/logout" method="post">
+        <button class="sign-out-button tooltipped tooltipped-s" aria-label="Sign out">
+          <span class="octicon octicon-sign-out"></span>
+        </button>
+      </form>
+    </li>
+
+  </ul>
+
+<div class="js-new-dropdown-contents hidden">
+  
+
+<ul class="dropdown-menu">
+  <li>
+    <a href="https://github.com/new"><span class="octicon octicon-repo"></span> New repository</a>
+  </li>
+  <li>
+    <a href="https://github.com/organizations/new"><span class="octicon octicon-organization"></span> New organization</a>
+  </li>
+
+
+    <li class="section-title">
+      <span title="rogerwang/node-webkit">This repository</span>
+    </li>
+      <li>
+        <a href="https://github.com/rogerwang/node-webkit/issues/new"><span class="octicon octicon-issue-opened"></span> New issue</a>
+      </li>
+</ul>
+
+</div>
+
+
+    
+  </div>
+</div>
+
+      
+
+        
+
+
+
+      <div id="start-of-content" class="accessibility-aid"></div>
+          <div class="site" itemscope="" itemtype="http://schema.org/WebPage">
+    <div id="js-flash-container">
+      
+    </div>
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+        
+
+<ul class="pagehead-actions">
+
+    <li class="subscription">
+      <form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" value="YwFPdrZdhB2yeDyyTeWguVBNDiM5QI4iDUheUhRJiC5CGJ3pIXe42c2Ut4YIPMeIF9lsu49+suTHthVR31wP+w==" type="hidden"></div>  <input id="repository_id" name="repository_id" value="3100121" type="hidden">
+
+    <div class="select-menu js-menu-container js-select-menu">
+      <a class="social-count js-social-count" href="https://github.com/rogerwang/node-webkit/watchers">
+        1,173
+      </a>
+      <span class="minibutton select-menu-button with-count js-menu-target" role="button" tabindex="0" aria-haspopup="true">
+        <span class="js-select-button">
+          <span class="octicon octicon-eye"></span>
+          Watch
+        </span>
+      </span>
+
+      <div class="select-menu-modal-holder">
+        <div class="select-menu-modal subscription-menu-modal js-menu-content" aria-hidden="true">
+          <div class="select-menu-header">
+            <span class="select-menu-title">Notification status</span>
+            <span class="octicon octicon-x js-menu-close"></span>
+          </div> <!-- /.select-menu-header -->
+
+          <div class="select-menu-list js-navigation-container" role="menu">
+
+            <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input checked="checked" id="do_included" name="do" value="included" type="radio">
+                <h4>Not watching</h4>
+                <span class="description">You only receive notifications for conversations in which you participate or are @mentioned.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-eye"></span>
+                  Watch
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+            <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input id="do_subscribed" name="do" value="subscribed" type="radio">
+                <h4>Watching</h4>
+                <span class="description">You receive notifications for all conversations in this repository.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-eye"></span>
+                  Unwatch
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+            <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input id="do_ignore" name="do" value="ignore" type="radio">
+                <h4>Ignoring</h4>
+                <span class="description">You do not receive any notifications for conversations in this repository.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-mute"></span>
+                  Stop ignoring
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+          </div> <!-- /.select-menu-list -->
+
+        </div> <!-- /.select-menu-modal -->
+      </div> <!-- /.select-menu-modal-holder -->
+    </div> <!-- /.select-menu -->
+
+</form>
+    </li>
+
+  <li>
+    
+
+  <div class="js-toggler-container js-social-container starring-container ">
+
+    <form accept-charset="UTF-8" action="/rogerwang/node-webkit/unstar" class="js-toggler-form starred" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" value="el5FKcmAiocvWPTz5N3U9q0eU/26HQ0gZm+FeaTcvYv21qZGa6+gSLuQYs44wWEHh1UOZue8QrzYWe6qVWReaw==" type="hidden"></div>
+      <button class="minibutton with-count js-toggler-target star-button" aria-label="Unstar this repository" title="Unstar rogerwang/node-webkit">
+        <span class="octicon octicon-star"></span>
+        Unstar
+      </button>
+        <a class="social-count js-social-count" href="https://github.com/rogerwang/node-webkit/stargazers">
+          13,503
+        </a>
+</form>
+    <form accept-charset="UTF-8" action="/rogerwang/node-webkit/star" class="js-toggler-form unstarred" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" value="IuTQf7PtQ/AJlyyk8idHMqlFNiehTK/LcnrOL9kK+ACoWruP4jViIn60Gf+OFMnVfAtXYU/KjsLUvEg1LxrxKA==" type="hidden"></div>
+      <button class="minibutton with-count js-toggler-target star-button" aria-label="Star this repository" title="Star rogerwang/node-webkit">
+        <span class="octicon octicon-star"></span>
+        Star
+      </button>
+        <a class="social-count js-social-count" href="https://github.com/rogerwang/node-webkit/stargazers">
+          13,503
+        </a>
+</form>  </div>
+
+  </li>
+
+
+        <li>
+          <a href="https://github.com/rogerwang/node-webkit/fork" class="minibutton with-count js-toggler-target fork-button lighter tooltipped-n" title="Fork your own copy of rogerwang/node-webkit to your account" aria-label="Fork your own copy of rogerwang/node-webkit to your account" rel="nofollow" data-method="post">
+            <span class="octicon octicon-repo-forked"></span>
+            Fork
+          </a>
+          <a href="https://github.com/rogerwang/node-webkit/network" class="social-count">1,489</a>
+        </li>
+
+</ul>
+
+        <h1 itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="repo-label"><span>public</span></span>
+          <span class="mega-octicon octicon-repo"></span>
+          <span class="author"><a href="https://github.com/rogerwang" class="url fn" itemprop="url" rel="author"><span itemprop="title">rogerwang</span></a></span><!--
+       --><span class="path-divider">/</span><!--
+       --><strong><a href="https://github.com/rogerwang/node-webkit" class="js-current-repository js-repo-home-link">node-webkit</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="" src="rogerwang_node-webkit_files/octocat-spinner-32.gif" height="16" width="16">
+          </span>
+
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+      <div class="repository-with-sidebar repo-container new-discussion-timeline js-new-discussion-timeline with-full-navigation">
+        <div class="repository-sidebar clearfix">
+            
+
+<div class="sunken-menu vertical-right repo-nav js-repo-nav js-repository-container-pjax js-octicon-loaders">
+  <div class="sunken-menu-contents">
+    <ul class="sunken-menu-group">
+      <li class="tooltipped tooltipped-w" aria-label="Code">
+        <a href="https://github.com/rogerwang/node-webkit" aria-label="Code" class="selected js-selected-navigation-item sunken-menu-item" data-hotkey="g c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /rogerwang/node-webkit">
+          <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+          <img alt="" class="mini-loader" src="rogerwang_node-webkit_files/octocat-spinner-32.gif" height="16" width="16">
+</a>      </li>
+
+        <li class="tooltipped tooltipped-w" aria-label="Issues">
+          <a href="https://github.com/rogerwang/node-webkit/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g i" data-selected-links="repo_issues /rogerwang/node-webkit/issues">
+            <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+            <span class="counter">648</span>
+            <img alt="" class="mini-loader" src="rogerwang_node-webkit_files/octocat-spinner-32.gif" height="16" width="16">
+</a>        </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Pull Requests">
+        <a href="https://github.com/rogerwang/node-webkit/pulls" aria-label="Pull Requests" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g p" data-selected-links="repo_pulls /rogerwang/node-webkit/pulls">
+            <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
+            <span class="counter">15</span>
+            <img alt="" class="mini-loader" src="rogerwang_node-webkit_files/octocat-spinner-32.gif" height="16" width="16">
+</a>      </li>
+
+
+        <li class="tooltipped tooltipped-w" aria-label="Wiki">
+          <a href="https://github.com/rogerwang/node-webkit/wiki" aria-label="Wiki" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g w" data-selected-links="repo_wiki /rogerwang/node-webkit/wiki">
+            <span class="octicon octicon-book"></span> <span class="full-word">Wiki</span>
+            <img alt="" class="mini-loader" src="rogerwang_node-webkit_files/octocat-spinner-32.gif" height="16" width="16">
+</a>        </li>
+    </ul>
+    <div class="sunken-menu-separator"></div>
+    <ul class="sunken-menu-group">
+
+      <li class="tooltipped tooltipped-w" aria-label="Pulse">
+        <a href="https://github.com/rogerwang/node-webkit/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="pulse /rogerwang/node-webkit/pulse">
+          <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+          <img alt="" class="mini-loader" src="rogerwang_node-webkit_files/octocat-spinner-32.gif" height="16" width="16">
+</a>      </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Graphs">
+        <a href="https://github.com/rogerwang/node-webkit/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_graphs repo_contributors /rogerwang/node-webkit/graphs">
+          <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+          <img alt="" class="mini-loader" src="rogerwang_node-webkit_files/octocat-spinner-32.gif" height="16" width="16">
+</a>      </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Network">
+        <a href="https://github.com/rogerwang/node-webkit/network" aria-label="Network" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-selected-links="repo_network /rogerwang/node-webkit/network">
+          <span class="octicon octicon-repo-forked"></span> <span class="full-word">Network</span>
+          <img alt="" class="mini-loader" src="rogerwang_node-webkit_files/octocat-spinner-32.gif" height="16" width="16">
+</a>      </li>
+    </ul>
+
+
+  </div>
+</div>
+
+              <div class="only-with-full-nav">
+                
+
+  
+
+<div class="clone-url open" data-protocol-type="http" data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
+  <h3><strong>HTTPS</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input class="clone js-url-field" value="https://github.com/rogerwang/node-webkit.git" readonly="readonly" type="text">
+    <span class="url-box-clippy">
+    <button aria-label="copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="https://github.com/rogerwang/node-webkit.git" data-copied-hint="copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+
+<div class="clone-url " data-protocol-type="ssh" data-url="/users/set_protocol?protocol_selector=ssh&amp;protocol_type=clone">
+  <h3><strong>SSH</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input class="clone js-url-field" value="git@github.com:rogerwang/node-webkit.git" readonly="readonly" type="text">
+    <span class="url-box-clippy">
+    <button aria-label="copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="git@github.com:rogerwang/node-webkit.git" data-copied-hint="copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+
+<div class="clone-url " data-protocol-type="subversion" data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
+  <h3><strong>Subversion</strong> checkout URL</h3>
+  <div class="clone-url-box">
+    <input class="clone js-url-field" value="https://github.com/rogerwang/node-webkit" readonly="readonly" type="text">
+    <span class="url-box-clippy">
+    <button aria-label="copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="https://github.com/rogerwang/node-webkit" data-copied-hint="copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+
+<p class="clone-options">You can clone with
+      <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a>,
+      <a href="#" class="js-clone-selector" data-protocol="ssh">SSH</a>,
+      or <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
+  <a href="https://help.github.com/articles/which-remote-url-should-i-use" class="help tooltipped tooltipped-n" aria-label="Get help on which URL is right for you.">
+    <span class="octicon octicon-question"></span>
+  </a>
+</p>
+
+
+
+                <a href="https://github.com/rogerwang/node-webkit/archive/master.zip" class="minibutton sidebar-button" aria-label="Download rogerwang/node-webkit as a zip file" title="Download rogerwang/node-webkit as a zip file" rel="nofollow">
+                  <span class="octicon octicon-cloud-download"></span>
+                  Download ZIP
+                </a>
+              </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container="">
+          
+
+<span id="js-show-full-navigation"></span>
+
+<div class="repository-meta js-details-container ">
+    <div class="repository-description js-details-show">
+      <p>Call all Node.js modules directly from DOM and enable a new way of writing applications with all Web technologies.</p>
+    </div>
+
+
+
+</div>
+
+<div class="capped-box overall-summary ">
+
+  <div class="stats-switcher-viewport js-stats-switcher-viewport">
+    <div class="stats-switcher-wrapper">
+    <ul class="numbers-summary">
+      <li class="commits">
+        <a data-pjax="" href="https://github.com/rogerwang/node-webkit/commits/master">
+            <span class="num">
+              <span class="octicon octicon-history"></span>
+              1,350
+            </span>
+            commits
+        </a>
+      </li>
+      <li>
+        <a data-pjax="" href="https://github.com/rogerwang/node-webkit/branches">
+          <span class="num">
+            <span class="octicon octicon-git-branch"></span>
+            11
+          </span>
+          branches
+        </a>
+      </li>
+
+      <li>
+        <a data-pjax="" href="https://github.com/rogerwang/node-webkit/releases">
+          <span class="num">
+            <span class="octicon octicon-tag"></span>
+            37
+          </span>
+          releases
+        </a>
+      </li>
+
+      <li>
+        
+  <a href="https://github.com/rogerwang/node-webkit/graphs/contributors">
+    <span class="num">
+      <span class="octicon octicon-organization"></span>
+      33
+    </span>
+    contributors
+  </a>
+      </li>
+    </ul>
+
+      <div class="repository-lang-stats">
+        <ol class="repository-lang-stats-numbers">
+          <li>
+              <a href="https://github.com/rogerwang/node-webkit/search?l=c%2B%2B">
+                <span class="color-block language-color" style="background-color:#f34b7d;"></span>
+                <span class="lang">C++</span>
+                <span class="percent">80.8%</span>
+              </a>
+          </li>
+          <li>
+              <a href="https://github.com/rogerwang/node-webkit/search?l=javascript">
+                <span class="color-block language-color" style="background-color:#f1e05a;"></span>
+                <span class="lang">JavaScript</span>
+                <span class="percent">10.1%</span>
+              </a>
+          </li>
+          <li>
+              <a href="https://github.com/rogerwang/node-webkit/search?l=objective-c%2B%2B">
+                <span class="color-block language-color" style="background-color:#4886FC;"></span>
+                <span class="lang">Objective-C++</span>
+                <span class="percent">7.8%</span>
+              </a>
+          </li>
+          <li>
+              <span class="other">
+                <span data-lang="Other" class="color-block language-color"></span>
+                <span class="lang">Other</span>
+                <span class="percent">1.3%</span>
+              </span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <div class="tooltipped tooltipped-s" aria-label="Show language statistics">
+    <a href="#" class="repository-lang-stats-graph js-toggle-lang-stats" style="background-color:#ccc">
+  <span class="language-color" style="width:80.8%; background-color:#f34b7d;" itemprop="keywords">C++</span><span class="language-color" style="width:10.1%; background-color:#f1e05a;" itemprop="keywords">JavaScript</span><span class="language-color" style="width:7.8%; background-color:#4886FC;" itemprop="keywords">Objective-C++</span><span class="language-color" style="width:1.3%; background-color:#ccc;" itemprop="keywords">Other</span>
+    </a>
+  </div>
+
+
+
+
+<div class="file-navigation in-mid-page">
+  <a href="https://github.com/rogerwang/node-webkit/find/master" class="js-show-file-finder minibutton empty-icon tooltipped tooltipped-s right" data-pjax="" data-hotkey="t" aria-label="Quickly jump between files">
+    <span class="octicon octicon-list-unordered"></span>
+  </a>
+    <a href="https://github.com/rogerwang/node-webkit/compare" aria-label="Compare, review, create a pull request" class="minibutton compact primary tooltipped tooltipped-s" data-pjax="">
+      <span class="octicon octicon-git-compare"></span>
+    </a>
+
+  
+
+<div class="select-menu js-menu-container js-select-menu">
+  <span class="minibutton select-menu-button js-menu-target css-truncate" data-hotkey="w" data-master-branch="master" data-ref="master" title="master" role="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <span class="octicon octicon-git-branch"></span>
+    <i>branch:</i>
+    <span class="js-select-button css-truncate-target">master</span>
+  </span>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax="" aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-x js-menu-close"></span>
+      </div> <!-- /.select-menu-header -->
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags" type="text">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a>
+            </li>
+          </ul>
+        </div><!-- /.select-menu-tabs -->
+      </div><!-- /.select-menu-filters -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/cef" data-name="cef" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="cef">cef</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/linux_menu_key_map" data-name="linux_menu_key_map" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="linux_menu_key_map">linux_menu_key_map</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/mac" data-name="mac" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="mac">mac</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item selected">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/master" data-name="master" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="master">master</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/nw0.8" data-name="nw0.8" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="nw0.8">nw0.8</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/nw10" data-name="nw10" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="nw10">nw10</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/nw-transparency" data-name="nw-transparency" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="nw-transparency">nw-transparency</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/password-manager" data-name="password-manager" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="password-manager">password-manager</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/rb32" data-name="rb32" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="rb32">rb32</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/skip-taskbar" data-name="skip-taskbar" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="skip-taskbar">skip-taskbar</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/v0.8" data-name="v0.8" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="v0.8">v0.8</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/webkitgtk" data-name="webkitgtk" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="webkitgtk">webkitgtk</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/v0.3.7" data-name="v0.3.7" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="v0.3.7">v0.3.7</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/v0.3.6" data-name="v0.3.6" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="v0.3.6">v0.3.6</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/v0.3.5" data-name="v0.3.5" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="v0.3.5">v0.3.5</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/v0.3.4" data-name="v0.3.4" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="v0.3.4">v0.3.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/v0.3.3" data-name="v0.3.3" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="v0.3.3">v0.3.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/v0.3.2" data-name="v0.3.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="v0.3.2">v0.3.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/v0.3.1" data-name="v0.3.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="v0.3.1">v0.3.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/v0.3.0" data-name="v0.3.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="v0.3.0">v0.3.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/v0.2.6" data-name="v0.2.6" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="v0.2.6">v0.2.6</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/v0.2.5" data-name="v0.2.5" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="v0.2.5">v0.2.5</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/v0.2.4" data-name="v0.2.4" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="v0.2.4">v0.2.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/v0.2.3" data-name="v0.2.3" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="v0.2.3">v0.2.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/v0.2.2" data-name="v0.2.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="v0.2.2">v0.2.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/v0.2.1" data-name="v0.2.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="v0.2.1">v0.2.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/v0.2.0" data-name="v0.2.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="v0.2.0">v0.2.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/nw-v0.9.2" data-name="nw-v0.9.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="nw-v0.9.2">nw-v0.9.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/nw-v0.9.1" data-name="nw-v0.9.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="nw-v0.9.1">nw-v0.9.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/nw-v0.9.0" data-name="nw-v0.9.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="nw-v0.9.0">nw-v0.9.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/nw-v0.8.4" data-name="nw-v0.8.4" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="nw-v0.8.4">nw-v0.8.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/nw-v0.8.3" data-name="nw-v0.8.3" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="nw-v0.8.3">nw-v0.8.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/nw-v0.8.2" data-name="nw-v0.8.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="nw-v0.8.2">nw-v0.8.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/nw-v0.8.0" data-name="nw-v0.8.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="nw-v0.8.0">nw-v0.8.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/nw-v0.7.4" data-name="nw-v0.7.4" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="nw-v0.7.4">nw-v0.7.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/nw-v0.7.3" data-name="nw-v0.7.3" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="nw-v0.7.3">nw-v0.7.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/nw-v0.7.2" data-name="nw-v0.7.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="nw-v0.7.2">nw-v0.7.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/nw-v0.7.1" data-name="nw-v0.7.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="nw-v0.7.1">nw-v0.7.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/nw-v0.7.0" data-name="nw-v0.7.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="nw-v0.7.0">nw-v0.7.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/nw-v0.6.3" data-name="nw-v0.6.3" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="nw-v0.6.3">nw-v0.6.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/nw-v0.6.2" data-name="nw-v0.6.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="nw-v0.6.2">nw-v0.6.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/nw-v0.6.1" data-name="nw-v0.6.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="nw-v0.6.1">nw-v0.6.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/nw-v0.6.0" data-name="nw-v0.6.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="nw-v0.6.0">nw-v0.6.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/nw-v0.5.1" data-name="nw-v0.5.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="nw-v0.5.1">nw-v0.5.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/nw-v0.5.0" data-name="nw-v0.5.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="nw-v0.5.0">nw-v0.5.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/nw-v0.4.2" data-name="nw-v0.4.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="nw-v0.4.2">nw-v0.4.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/nw-v0.4.1" data-name="nw-v0.4.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="nw-v0.4.1">nw-v0.4.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/rogerwang/node-webkit/tree/nw-v0.4.0" data-name="nw-v0.4.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" title="nw-v0.4.0">nw-v0.4.0</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+    </div> <!-- /.select-menu-modal -->
+  </div> <!-- /.select-menu-modal-holder -->
+</div> <!-- /.select-menu -->
+
+
+
+  <div class="breadcrumb"><span class="repo-root js-repo-root"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://github.com/rogerwang/node-webkit" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">node-webkit</span></a></span></span><span class="separator"> / </span><form action="/rogerwang/node-webkit/new/master" aria-label="Fork this project and create a new file" class="js-new-blob-form tooltipped tooltipped-e new-file-link" method="post"><span aria-label="Fork this project and create a new file" class="js-new-blob-submit octicon octicon-plus" data-test-id="create-new-git-file" role="button"></span></form></div>
+</div>
+
+
+
+
+  
+  <div class="commit commit-tease js-details-container">
+    <p class="commit-title ">
+        <a href="https://github.com/rogerwang/node-webkit/commit/de26cd8fe4aa37f250647db6f45b47ade2a85bb0" class="message" data-pjax="true" title="Merge pull request #1957 from jtg-gg/badge
+
+SetBadgeLabel Windows Implementation">Merge pull request</a> <a href="https://github.com/rogerwang/node-webkit/pull/1957" class="issue-link" title="SetBadgeLabel Windows Implementation">#1957</a> <a href="https://github.com/rogerwang/node-webkit/commit/de26cd8fe4aa37f250647db6f45b47ade2a85bb0" class="message" data-pjax="true" title="Merge pull request #1957 from jtg-gg/badge
+
+SetBadgeLabel Windows Implementation">from jtg-gg/badge</a>
+        <span class="hidden-text-expander inline"><a href="#" class="js-details-target">…</a></span>
+    </p>
+      <div class="commit-desc"><pre>SetBadgeLabel Windows Implementation</pre></div>
+    <div class="commit-meta">
+      <button aria-label="Copy SHA" class="js-zeroclipboard zeroclipboard-link" data-clipboard-text="de26cd8fe4aa37f250647db6f45b47ade2a85bb0" data-copied-hint="copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+      <a href="https://github.com/rogerwang/node-webkit/commit/de26cd8fe4aa37f250647db6f45b47ade2a85bb0" class="sha-block" data-pjax="">latest commit <span class="sha">de26cd8fe4</span></a>
+
+      <div class="authorship">
+        <img alt="Roger Wang" class="gravatar js-avatar" data-user="165401" src="rogerwang_node-webkit_files/165401.png" height="20" width="20">
+        <span class="author-name"><a href="https://github.com/rogerwang" data-skip-pjax="true" rel="author">rogerwang</a></span>
+        authored <time title="13 черв. 2014 08:27 GMT+3" class="updated" datetime="2014-06-13T13:27:00+08:00" is="relative-time">6 days ago</time>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="file-wrap">
+    <table class="files" data-pjax="">
+
+      
+<tbody class="" data-url="/rogerwang/node-webkit/file-list/master" data-deferred-content-error="Failed to load latest commit information.">
+
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="" class="spinner" src="rogerwang_node-webkit_files/octocat-spinner-32.gif" height="16" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/rogerwang/node-webkit/tree/master/src" class="js-directory-link" id="25d902c24283ab8cfbac54dfa101ad31-14ccbbf8a926a0e44a6253cf56b9583cf3b403ef" title="src">src</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/rogerwang/node-webkit/commit/1213d7360d5eec9bacbe74cfea15daa507848553" class="message" data-pjax="true" title="[WIN] badge feature, fix the indentation, add my name to Authors">[WIN] badge feature, fix the indentation, add my name to Authors</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time title="13 черв. 2014 05:16 GMT+3" datetime="2014-06-13T02:16:24Z" is="time-ago">6 days ago</time></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="" class="spinner" src="rogerwang_node-webkit_files/octocat-spinner-32.gif" height="16" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/rogerwang/node-webkit/tree/master/tests" class="js-directory-link" id="b61a6d542f9036550ba9c401c80f00ef-2f85b2c91e0ee498f73cbd17faf7ca0ec52d1663" title="tests">tests</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/rogerwang/node-webkit/commit/0555ea53903355e5794191c66c9d6efd1ec64833" class="message" data-pjax="true" title="Merge pull request #1948 from gitchs/single-instance-test-case
+
+APP single instance test case PR for v0.9">Merge pull request</a> <a href="https://github.com/rogerwang/node-webkit/pull/1948" class="issue-link" title="APP single instance test case PR for v0.9">#1948</a> <a href="https://github.com/rogerwang/node-webkit/commit/0555ea53903355e5794191c66c9d6efd1ec64833" class="message" data-pjax="true" title="Merge pull request #1948 from gitchs/single-instance-test-case
+
+APP single instance test case PR for v0.9">from gitchs/single-instance-test-case</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time title="11 черв. 2014 03:30 GMT+3" datetime="2014-06-11T00:30:16Z" is="time-ago">8 days ago</time></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="" class="spinner" src="rogerwang_node-webkit_files/octocat-spinner-32.gif" height="16" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/rogerwang/node-webkit/tree/master/tools" class="js-directory-link" id="4a931512ce65bdc9ca6808adf92d8783-0353436702c618dc2c2e39e7be0b648a7e901877" title="tools">tools</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/rogerwang/node-webkit/commit/7c3aadeaa601aea1ed88ad6b39352ae5fd8a78d6" class="message" data-pjax="true" title="Flush stdout to inform buildbot that it is not hang.
+
+Added retry and let 'node-webkit-' bundle to be uploaded first.">Flush stdout to inform buildbot that it is not hang.</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time title="6 черв. 2014 05:59 GMT+3" datetime="2014-06-06T02:59:24Z" is="time-ago">13 days ago</time></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="" class="spinner" src="rogerwang_node-webkit_files/octocat-spinner-32.gif" height="16" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/rogerwang/node-webkit/blob/master/.gitignore" class="js-directory-link" id="a084b794bc0759e7a6b77810e01874f2-a06f6f09cfbb3637ae4f479d8ca298012683dc1c" title=".gitignore">.gitignore</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/rogerwang/node-webkit/commit/aeb4b44b36bf275fe6b7edca6534c6a6afcb3b05" class="message" data-pjax="true" title="[test] different method of starting app">[test] different method of starting app</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time title="22 січ. 2013 08:46 GMT+2" datetime="2013-01-22T06:46:25Z" is="time-ago">a year ago</time></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="" class="spinner" src="rogerwang_node-webkit_files/octocat-spinner-32.gif" height="16" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/rogerwang/node-webkit/blob/master/AUTHORS" class="js-directory-link" id="3d350169560e75d0cf9fc8e3574a3639-c34ff377b79810abdee3cd89b9b6654950312f6a" title="AUTHORS">AUTHORS</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/rogerwang/node-webkit/commit/1213d7360d5eec9bacbe74cfea15daa507848553" class="message" data-pjax="true" title="[WIN] badge feature, fix the indentation, add my name to Authors">[WIN] badge feature, fix the indentation, add my name to Authors</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time title="13 черв. 2014 05:16 GMT+3" datetime="2014-06-13T02:16:24Z" is="time-ago">6 days ago</time></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="" class="spinner" src="rogerwang_node-webkit_files/octocat-spinner-32.gif" height="16" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/rogerwang/node-webkit/blob/master/CHANGELOG.md" class="js-directory-link" id="4ac32a78649ca5bdd8e0ba38b7006a1e-23695737c9b6b8abd95b3f840a54f22c5a714fc8" title="CHANGELOG.md">CHANGELOG.md</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/rogerwang/node-webkit/commit/222b62aeea063780619d5bdec5bd0710586cdec4" class="message" data-pjax="true" title="[CHANGELOG] update for 0.8 branch">[CHANGELOG] update for 0.8 branch</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time title="26 лют. 2014 03:57 GMT+2" datetime="2014-02-26T01:57:40Z" is="time-ago">4 months ago</time></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="" class="spinner" src="rogerwang_node-webkit_files/octocat-spinner-32.gif" height="16" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/rogerwang/node-webkit/blob/master/LICENSE" class="js-directory-link" id="9879d6db96fd29134fc802214163b95a-3a4009653df05fcbbc03d4f1f0f657415fca7c16" title="LICENSE">LICENSE</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/rogerwang/node-webkit/commit/fb491827d885702a14d715b6db0b333f046011f2" class="message" data-pjax="true" title="Update license year
+
+Fix outdated copyright year (updated to 2014).
+The copyright year was out of date. Copyright notices must reflect the current year, so this commit updates the listed year to 2014.
+
+See http://www.copyright.gov/circs/circ01.pdf for more info.">Update license year</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time title="13 бер. 2014 07:42 GMT+2" datetime="2014-03-13T05:42:29Z" is="time-ago">3 months ago</time></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="" class="spinner" src="rogerwang_node-webkit_files/octocat-spinner-32.gif" height="16" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/rogerwang/node-webkit/blob/master/README.md" class="js-directory-link" id="04c6e90faac2675aa89e2176d2eec7d8-7047d6d0dd523af4b36375ed1f805e9ab7113fc7" title="README.md">README.md</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/rogerwang/node-webkit/commit/9e200256b53c9de6266e0742f06bb6b8e6b49296" class="message" data-pjax="true" title="Include Node/Chrome versions in releases">Include Node/Chrome versions in releases</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time title="11 трав. 2014 01:54 GMT+3" datetime="2014-05-10T22:54:12Z" is="time-ago">a month ago</time></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="" class="spinner" src="rogerwang_node-webkit_files/octocat-spinner-32.gif" height="16" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/rogerwang/node-webkit/blob/master/nw.gypi" class="js-directory-link" id="42484bd9a5db26b9b6305cdcbbb8c194-b158b0f1e1feb164b65a60a1f053a72b8c41780a" title="nw.gypi">nw.gypi</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/rogerwang/node-webkit/commit/ecd464c7b49f451962e24194397a5e44d72019a6" class="message" data-pjax="true" title="Updated symbol generation and strip process.
+
+Use the upstream's script (with a minor fix) to generate symbol and
+strip nw binary in the mean time.
+Since everything is built under '-g' (common.gyp:linux_dump_symbols=1),
+the chromedriver and nwsnapshot should also be stripped.">Updated symbol generation and strip process.</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time title="22 трав. 2014 07:00 GMT+3" datetime="2014-05-22T04:00:51Z" is="time-ago">28 days ago</time></span>
+      </td>
+    </tr>
+</tbody>
+
+    </table>
+  </div>
+
+
+  <div id="readme" class="clearfix announce instapaper_body md">
+    <span class="name">
+      <span class="octicon octicon-book"></span>
+      README.md
+    </span>
+
+    <article class="markdown-body entry-content" itemprop="mainContentOfPage"><h2>
+<a name="user-content-introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h2>
+
+<p>node-webkit is an app runtime based on <code>Chromium</code> and <code>node.js</code>. You can 
+write native apps in HTML and JavaScript with node-webkit. It also lets you
+call Node.js modules directly from the DOM and enables a new way of writing
+native applications with all Web technologies.</p>
+
+<p>It's created and developed in the Intel Open Source Technology Center.</p>
+
+<p><a href="https://speakerdeck.com/u/zcbenz/p/node-webkit-app-runtime-based-on-chromium-and-node-dot-js">Introduction to node-webkit (slides)</a><br><a href="http://strongloop.com/strongblog/creating-desktop-applications-with-node-webkit/">Creating Desktop Applications With node-webkit</a><br><a href="http://oldgeeksguide.github.io/presentations/html5devconf2013/wtod.html">WebApp to DesktopApp with node-webkit (slides)</a></p>
+
+<h2>
+<a name="user-content-features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<ul class="task-list">
+<li>Apps written in modern HTML5, CSS3, JS and WebGL.</li>
+<li>Complete support for <a href="http://nodejs.org/api/">Node.js APIs</a> and all its <a href="https://npmjs.org/">third party modules</a>.</li>
+<li>Good performance: Node and WebKit runs in the same thread: Function 
+calls are made straightforward; objects are in the same heap and can 
+just reference each other;</li>
+<li>Easy to package and distribute apps.</li>
+<li>Available on Linux, Mac OSX and Windows</li>
+</ul><h2>
+<a name="user-content-downloads" class="anchor" href="#downloads" aria-hidden="true"><span class="octicon octicon-link"></span></a>Downloads</h2>
+
+<p><a href="https://groups.google.com/d/msg/node-webkit/qpBhcWr-hSc/caGjhtl8cEgJ">v0.9.2 release notes</a></p>
+
+<p>Prebuilt binaries (v0.9.2 - Feb 20, 2014, based off of Node v0.11.9, Chrome 32.0.1700.107):</p>
+
+<ul class="task-list">
+<li>Linux: <a href="http://dl.node-webkit.org/v0.9.2/node-webkit-v0.9.2-linux-ia32.tar.gz">32bit</a> / <a href="http://dl.node-webkit.org/v0.9.2/node-webkit-v0.9.2-linux-x64.tar.gz">64bit</a>
+</li>
+<li>Windows: <a href="http://dl.node-webkit.org/v0.9.2/node-webkit-v0.9.2-win-ia32.zip">win32</a>
+</li>
+<li>Mac: <a href="http://dl.node-webkit.org/v0.9.2/node-webkit-v0.9.2-osx-ia32.zip">32bit, 10.7+</a>
+</li>
+</ul><p><strong>If your native Node module works only with Node v0.10, 
+then you should use node-webkit v0.8.x, which is also a maintained 
+branch. <a href="https://groups.google.com/d/msg/node-webkit/2OJ1cEMPLlA/09BvpTagSA0J">More info</a></strong><br><a href="https://groups.google.com/d/msg/node-webkit/CLPkgfV-i7s/hwkkQuJ1kngJ">v0.8.6 release notes</a></p>
+
+<p>Prebuilt binaries (v0.8.6 - Apr 18, 2014, based off of Node v0.10.22, Chrome 30.0.1599.66):</p>
+
+<ul class="task-list">
+<li>Linux: <a href="http://dl.node-webkit.org/v0.8.6/node-webkit-v0.8.6-linux-ia32.tar.gz">32bit</a> / <a href="http://dl.node-webkit.org/v0.8.6/node-webkit-v0.8.6-linux-x64.tar.gz">64bit</a>
+</li>
+<li>Windows: <a href="http://dl.node-webkit.org/v0.8.6/node-webkit-v0.8.6-win-ia32.zip">win32</a>
+</li>
+<li>Mac: <a href="http://dl.node-webkit.org/v0.8.6/node-webkit-v0.8.6-osx-ia32.zip">32bit, 10.7+</a>
+</li>
+</ul><p><a href="https://github.com/rogerwang/node-webkit/wiki/Downloads-of-old-versions">Looking for older versions?</a></p>
+
+<h3>
+<a name="user-content-demos-and-real-apps" class="anchor" href="#demos-and-real-apps" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demos and real apps</h3>
+
+<p>You may also be interested in <a href="https://github.com/zcbenz/nw-sample-apps">our demos repository</a> and the <a href="https://github.com/rogerwang/node-webkit/wiki/List-of-apps-and-companies-using-node-webkit">List of apps and companies using node-webkit</a>.</p>
+
+<h2>
+<a name="user-content-quick-start" class="anchor" href="#quick-start" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quick Start</h2>
+
+<p>Create <code>index.html</code>:</p>
+
+<div class="highlight highlight-html"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Hello World!<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Hello World!<span class="nt">&lt;/h1&gt;</span>
+    We are using node.js <span class="nt">&lt;script&gt;</span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">version</span><span class="p">)</span><span class="nt">&lt;/script&gt;</span>.
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+
+<p>Create <code>package.json</code>:</p>
+
+<div class="highlight highlight-json"><pre><span class="p">{</span>
+  <span class="nt">"name"</span><span class="p">:</span> <span class="s2">"nw-demo"</span><span class="p">,</span>
+  <span class="nt">"main"</span><span class="p">:</span> <span class="s2">"index.html"</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Compress <code>index.html</code> and <code>package.json</code> into a zip archive called <code>app.nw</code>:</p>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>zip app.nw index.html package.json
+</pre></div>
+
+<p>This should create a structure like this:</p>
+
+<pre><code>app.nw
+|-- package.json
+`-- index.html
+</code></pre>
+
+<p>Download the prebuilt binary for your platform and use it to open the
+<code>app.nw</code> file:</p>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>./nw app.nw
+</pre></div>
+
+<p>Note: on Windows, you can drag the <code>app.nw</code> to <code>nw.exe</code> to open it.</p>
+
+<h2>
+<a name="user-content-documents" class="anchor" href="#documents" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documents</h2>
+
+<p>For more information on how to write/package/run apps, see:</p>
+
+<ul class="task-list">
+<li><a href="https://github.com/rogerwang/node-webkit/wiki/How-to-run-apps">How to run apps</a></li>
+<li><a href="https://github.com/rogerwang/node-webkit/wiki/How-to-package-and-distribute-your-apps">How to package and distribute your apps</a></li>
+<li><a href="https://github.com/rogerwang/node-webkit/wiki/Using-Node-modules">How to use Node.js modules in node-webkit</a></li>
+</ul><p>And our <a href="https://github.com/rogerwang/node-webkit/wiki">Wiki</a> for much more.</p>
+
+<h2>
+<a name="user-content-community" class="anchor" href="#community" aria-hidden="true"><span class="octicon octicon-link"></span></a>Community</h2>
+
+<p>We use the <a href="http://groups.google.com/group/node-webkit">node-webkit group</a> as
+our mailing list (use English only). Subscribe via <a href="mailto:node-webkit+subscribe@googlegroups.com">node-webkit+subscribe@googlegroups.com</a>.
+Issues are being tracked here on GitHub.</p>
+
+<p>You can chat with us on IRC in the ##node-webkit channel on irc.freenode.net  </p>
+
+<h2>
+<a name="user-content-license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p><code>node-webkit</code>'s code in this repo uses the MIT license, see our <code>LICENSE</code> file. To redistribute the binary, see <a href="https://github.com/rogerwang/node-webkit/wiki/How-to-package-and-distribute-your-apps">How to package and distribute your apps</a></p>
+
+<p><a href="https://github.com/igrigorik/ga-beacon"><img src="rogerwang_node-webkit_files/68747470733a2f2f67612d626561636f6e2e61707073706f742e636f6d2f.gif" alt="Analytics" data-canonical-src="https://ga-beacon.appspot.com/UA-27805459-2/node-webkit/index" style="max-width:100%;"></a></p></article>
+  </div>
+
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer">
+    <ul class="site-footer-links right">
+      <li><a href="https://status.github.com/">Status</a></li>
+      <li><a href="http://developer.github.com/">API</a></li>
+      <li><a href="http://training.github.com/">Training</a></li>
+      <li><a href="http://shop.github.com/">Shop</a></li>
+      <li><a href="https://github.com/blog">Blog</a></li>
+      <li><a href="https://github.com/about">About</a></li>
+
+    </ul>
+
+    <a href="https://github.com/">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+    </a>
+
+    <ul class="site-footer-links">
+      <li>© 2014 <span title="0.07722s from github-fe131-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy">Privacy</a></li>
+        <li><a href="https://github.com/security">Security</a></li>
+        <li><a href="https://github.com/contact">Contact</a></li>
+    </ul>
+  </div><!-- /.site-footer -->
+</div><!-- /.container -->
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-fullscreen-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="fullscreen-contents js-fullscreen-contents" placeholder="" data-suggester="fullscreen_suggester"></textarea>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped tooltipped-w" aria-label="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped tooltipped-w" aria-label="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="#" class="octicon octicon-x close js-ajax-error-dismiss" aria-label="Dismiss error"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      <script crossorigin="anonymous" src="rogerwang_node-webkit_files/frameworks-e0a04703cfb635207e38b91038b5c092405ee860.js" type="text/javascript"></script>
+      <script async="async" crossorigin="anonymous" src="rogerwang_node-webkit_files/github-bfd18ecbd81662d9189dd9fe22afaced97f42522.js" type="text/javascript"></script>
+      
+      
+        <script async="" src="rogerwang_node-webkit_files/analytics.js"></script>
+  
+
+
+<div style="position: absolute; left: 0px; top: -9999px; width: 15px; height: 15px; z-index: 999999999;" class="global-zeroclipboard-container" id="global-zeroclipboard-html-bridge">      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" id="global-zeroclipboard-flash-bridge" height="100%" width="100%">         <param name="movie" value="https://assets-cdn.github.com/flash/ZeroClipboard.v1.3.2.swf">         <param name="allowScriptAccess" value="always">         <param name="scale" value="exactfit">         <param name="loop" value="false">         <param name="menu" value="false">         <param name="quality" value="best">         <param name="bgcolor" value="#ffffff">         <param name="wmode" value="transparent">         <param name="flashvars" value="trustedOrigins=github.com%2C%2F%2Fgithub.com%2Chttps%3A%2F%2Fgithub.com%2Cgithub.com%2C%2F%2Fgithub.com%2Chttps%3A%2F%2Fgithub.com">         <embed src="rogerwang_node-webkit_files/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="global-zeroclipboard-flash-bridge" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="trustedOrigins=github.com%2C%2F%2Fgithub.com%2Chttps%3A%2F%2Fgithub.com%2Cgithub.com%2C%2F%2Fgithub.com%2Chttps%3A%2F%2Fgithub.com" scale="exactfit" height="100%" width="100%">                </object></div></body></html>
