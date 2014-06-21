@@ -145,7 +145,12 @@ class Main
 		}
 	}
 	
-	private static function checkUpdates():Void
+	macro function getVersion()
+	{
+			
+	}
+	
+	static function checkUpdates():Void
 	{
 		if (FileSystem.exists("autoupdate"))
 		{
@@ -192,6 +197,9 @@ class Main
 	{
 		Sys.println("Looking for node-webkit url...");
 		
+		var args = Sys.args();
+		
+		//PathHelper.combine(args[args.length - 1], "rogerwang_node-webkit.html")
 		var data = sys.io.File.getContent("rogerwang_node-webkit.html");
 		//Http.requestUrl("https://github.com/rogerwang/node-webkit");
 		
