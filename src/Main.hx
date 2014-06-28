@@ -117,6 +117,8 @@ class Main
 							path = args[0];
 						}
 						
+						trace(args);
+							
 						ProcessHelper.runProcess("./bin", "node-webkit.app/Contents/MacOS/node-webkit", [path], false);
 						trace(path);
 					}
