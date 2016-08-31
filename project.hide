@@ -20,8 +20,26 @@
             ]
             ,"activeLine" : 202
         }
+        ,{
+             "path" : "src\\Main.hx"
+            ,"useTabs" : true
+            ,"indentSize" : 4
+            ,"foldedRegions" : [
+
+            ]
+            ,"activeLine" : 101
+        }
+        ,{
+             "path" : "src\\helpers\\PathHelper.hx"
+            ,"useTabs" : true
+            ,"indentSize" : 4
+            ,"foldedRegions" : [
+
+            ]
+            ,"activeLine" : 547
+        }
     ]
-    ,"activeFile" : "src/Main.hx"
+    ,"activeFile" : "src\\Main.hx"
     ,"openFLTarget" : null
     ,"openFLBuildMode" : "Debug"
     ,"runActionType" : 2

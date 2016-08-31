@@ -54,6 +54,8 @@ class Main
 	{	
 		var args:Array<String> = Sys.args();
 		
+		trace(args);
+		
 		if (args[0] == "setup")
 		{
 			setup();
@@ -84,12 +86,20 @@ class Main
 					setup();
 				}
 				
-				var path:String = args[1];
+				var argsCopy = args.copy();
+				argsCopy.shift();
+				
+				var path:String = args[0];
+				
+				trace(path);
 
 				if (!FileSystem.exists(path))
 				{
 					path = PathHelper.combine(args[1], args[0]);
+					argsCopy.shift();
 				}
+				
+				path = PathHelper.standardize(path, false);
 				
 				if (FileSystem.exists(path))
 				{
@@ -124,7 +134,10 @@ class Main
 					}
 					else
 					{
-						ProcessHelper.runProcess("./bin", "nw", [path], false);
+						
+						var args2 = [path].concat(argsCopy);
+						trace(args2);
+						ProcessHelper.runProcess("./bin", "nw", args2, false);
 					}
 				}
 			}
@@ -331,6 +344,7 @@ class Main
 	
 	private static function downloadFile(remotePath:String):Void
 	{		
+		/*
 		if (FileSystem.exists (localPath)) {
 
 			var answer = ask ("File found. Install existing file?");
@@ -341,6 +355,7 @@ class Main
 			}
 
 		}
+		*/
 
 		trace(remotePath);
 
@@ -353,8 +368,6 @@ class Main
 		var progress = new Progress (out);
 		//"http://s3.amazonaws.com/node-webkit/" +
 		var h = new Http (remotePath);
-		
-		trace(remotePath);
 
 		h.cnxTimeout = 30;
 
